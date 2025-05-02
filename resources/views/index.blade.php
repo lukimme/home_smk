@@ -14,10 +14,10 @@
             <div class="carousel-item active" style="background-image: url(assets/aset/baner/bg.jpg)">
                 <div class="carousel-container ">
                     <div class="container">
-                        <h2 class="animate__animated animate__fadeInDown ">Selamat Datang di
-                            <span>SMKBM</span>
+                        <h2 class="animate__animated animate__fadeInDown ">
+                            <span>SMK BUDI MULIA PAKISAJI</span>
                         </h2>
-                        <p class="animate__animated animate__fadeInUp">"Tidak ada anak tidak bisa sekolah karena biaya"
+                        <p class="animate__animated animate__fadeInUp">"Smart, Disiplin and Powerfull"
                         </p>
                         <!--<a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Selengkapnya..</a>-->
                     </div>
@@ -132,12 +132,16 @@
                 </div>
 
                 <div class="col-6 col-lg-3 d-flex align-items-stretch mb-1 mb-lg-0" data-aos="fade-up">
+
                     <div class="icon-box">
-                        <!-- <div class="icon"><i class="bx bx-layer"></i></div> -->
-                        <div class="icon"><img src="assets/aset/lulusan.png" class="img-fluid" alt=""></div>
-                        <h4 class="title"><a href="#">LULUSAN</a></h4>
-                        <p class="description lh-base">Informasi terkait lulusan dan alumni SMK Budi Mulia</p>
+                        <a href="https://sas.smkbudimuliapakisaji.sch.id/">
+                            <!-- <div class="icon"><i class="bx bx-layer"></i></div> -->
+                            <div class="icon"><img src="assets/aset/lulusan.png" class="img-fluid" alt=""></div>
+                            <h4 class="title">LULUSAN</h4>
+                            <p class="description lh-base">Informasi terkait lulusan dan alumni SMK Budi Mulia</p>
+                        </a>
                     </div>
+
                 </div>
 
             </div>
@@ -148,7 +152,7 @@
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="sambutan">
-        <div class="container" data-aos="fade-up">
+        <div class="container my-5" data-aos="fade-up">
 
             <div class="row justify-content-center">
                 <div
@@ -174,7 +178,11 @@
                 <div class="col-lg-6 col-12 align-items-stretch video-box order-1 order-lg-2" data-aos="zoom-in"
                     data-aos-delay="100" style="min-height:0;">
                     <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a> -->
-                    <img src="assets/aset/gmbr1.webp" alt="" class="img-fluid">
+                    <!-- <img src="assets/aset/ks.jpg" alt="" class="img-fluid d-block mx-auto w-100 w-md-50 rounded-3"> -->
+                    <img src="assets/aset/ks.jpg" alt="" class="img-fluid d-block mx-auto rounded-3"
+                        style="width: 100%; max-width: 50%;">
+
+
                 </div>
 
             </div>
@@ -187,6 +195,7 @@
         <div class="section-title text-center">
             <p>Informasi Terkini</p>
         </div>
+
         <div class="owl-carousel owl-theme px-2">
             @forelse ($terbaru as $caro)
             <div class="item">
