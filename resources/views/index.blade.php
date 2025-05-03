@@ -134,11 +134,11 @@
                 <div class="col-6 col-lg-3 d-flex align-items-stretch mb-1 mb-lg-0" data-aos="fade-up">
 
                     <div class="icon-box">
-                        <a href="https://sas.smkbudimuliapakisaji.sch.id/">
+                        <a href="https://informasi.smkbudimuliapakisaji.sch.id/">
                             <!-- <div class="icon"><i class="bx bx-layer"></i></div> -->
                             <div class="icon"><img src="assets/aset/lulusan.png" class="img-fluid" alt=""></div>
                             <h4 class="title">LULUSAN</h4>
-                            <p class="description lh-base">Informasi terkait lulusan dan alumni SMK Budi Mulia</p>
+                            <p class="description lh-base p-1">Informasi terkait lulusan dan alumni SMK Budi Mulia</p>
                         </a>
                     </div>
 
@@ -159,17 +159,22 @@
                     class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
 
                     <div class="content">
-                        <p class="fs-5 fw-bold text-muted">Selamat Datang di Website SMK Budi Mulia Pakisaji</p>
-                        <!--<h3>Drs. Suyono M.T</h3>-->
+                        <p class="fs-5 fw-bold text-muted">Sambutan Kepala SMK Budi Mulia Pakisaji</p>
 
-                        <!-- <h3><strong>Drs. Suyono M.T</strong></h3> -->
                         <p>
-                            Di website SMK Budi Mulia Pakisaji yang saya tujukan untuk seluruh unsur pimpinan, guru,
-                            karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang
-                            sekolah kami. Tentunya dalam penyajian informasi masih banyak kekurangan, oleh karena itu
-                            kepada seluruh civitas akademika dan masyarakat umum dapat memberikan saran dan kritik demi
-                            kemajuan lebih lanjut.
+
+                            Selamat datang di website resmi SMK Budi Mulia Pakisaji.
+
+                            Website ini kami hadirkan sebagai sarana informasi berbasis teknologi digital yang
+                            memudahkan masyarakat mengakses berbagai hal terkait SMK Budi Mulia Mulai dari program
+                            keahlian, kegiatan siswa, hingga layanan pendaftaran. Semoga kehadiran website ini dapat
+                            menjadi jembatan komunikasi yang bermanfaat bagi seluruh pihak.<br> Terima kasih atas
+                            kunjungannya.
+
+
                         </p>
+                        <h5><strong>H. Imam Budiono, S.Pd</strong></h5>
+                        <h6>Kepala SMK Budi Mulia Pakisaji</h6>
 
                     </div>
 
