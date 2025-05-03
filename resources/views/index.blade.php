@@ -137,7 +137,7 @@
                         <a href="https://informasi.smkbudimuliapakisaji.sch.id/">
                             <!-- <div class="icon"><i class="bx bx-layer"></i></div> -->
                             <div class="icon"><img src="assets/aset/lulusan.png" class="img-fluid" alt=""></div>
-                            <h4 class="title">LULUSAN</h4>
+                            <h4 class="title"><a href="https://informasi.smkbudimuliapakisaji.sch.id/">LULUSAN</a></h4>
                             <p class="description lh-base p-1">Informasi terkait lulusan dan alumni SMK Budi Mulia</p>
                         </a>
                     </div>
