@@ -1,5 +1,5 @@
 @extends('Layout.layout2')
-@section('title', 'Formulir Pendaftaran SMK BUDI MULIA PAKISAJI Tahun Ajaran 2024/2025')
+@section('title', 'Formulir Pendaftaran SMK BUDI MULIA PAKISAJI Tahun Ajaran 2025/2026')
 @section('content')
 <section>
     <div class="container pt-5">
@@ -40,8 +40,9 @@
 
                                 <div class="col-12 col-md-3 order-md-2 order-1">
                                     <!--<div class="d-flex justify-content-end">-->
-                                    <p class="fw-bold text-end mb-0" style="font-size: 16px;">Gel INDENT</p>
-                                    <p class="fst-italic text-end mt-0" style="font-size: 10px;">Sep 2024 - Jan 2025</p>
+                                    <p class="fw-bold text-end mb-0" style="font-size: 16px;">Gelombang 1</p>
+                                    <p class="fst-italic text-end mt-0" style="font-size: 10px;">Februari - April 2025
+                                    </p>
                                     <!--</div>-->
                                 </div>
                             </div>
