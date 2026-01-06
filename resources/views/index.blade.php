@@ -56,9 +56,7 @@
                         <!--<a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">selengkapnya</a>-->
                     </div>
                 </div>
-            </div>
-
-          
+            </div>          
 
             <!-- Slide 6 -->
             <div class="carousel-item" style="background-image: url(assets/aset/baner/tbkr.png)">
