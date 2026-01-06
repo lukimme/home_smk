@@ -115,7 +115,7 @@
         <div class="container">
             <a class="navbar-brand" href="/"><img src="/assets/aset/logo.png" class="img-fluid" alt=""></a>
             <div class"justify-content-end">
-                <a class="btn btn-outline-warning d-inline d-lg-none" href="ppdb" role="button">PPDB</a>
+                <a class="btn btn-outline-warning d-inline d-lg-none" href="ppdb" role="button">SPMB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -179,7 +179,7 @@
                     </ul>
 
                     <div class="d-none d-lg-inline">
-                        <a href="/ppdb"><button class="btn btn-outline-warning" type="button">PPDB</button></a>
+                        <a href="/ppdb"><button class="btn btn-outline-warning" type="button">SPMB</button></a>
                     </div>
                 </div>
             </div>

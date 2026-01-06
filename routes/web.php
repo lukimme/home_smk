@@ -6,6 +6,7 @@ use App\Http\Controllers\pdfController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UtamaController;
+use App\Http\Controllers\SimpanController;
 use App\Http\Controllers\searchController;
 use GuzzleHttp\Client;
 use Barryvdh\DomPDF\PDF;
@@ -55,8 +56,14 @@ Route::get('daftar', function () {
 Route::get('form-sukses', function () {
     return view('formsukses');
 });
-//untuk menyimpan data dan menangkap respon dari API
-Route::post('/simpan', 'App\Http\Controllers\simpanController@simpan');
+
+Route::get('formulir', function () {
+    return view('formulir');
+});
+
+
+// untuk menyimpan data dan menangkap respon dari API
+Route::post('/simpan', [SimpanController::class, 'simpan'])->name('pendaftaran.store');
 Route::get('/getSiswaTerbaru/{id}/{y}','App\Http\Controllers\simpanController@getTerbaru');
 
 // Route::get('/download-pdf/{id}', 'App\Http\Controllers\pdfController@pdf');
@@ -74,5 +81,15 @@ Route::get('/download-pdf/{id}', [pdfController::class,'pdf2']);
 //  Halaman berita /blog
 Route::get('blog', [BeritaController::class, 'berita']);
 Route::get('/search', [searchController::class, 'sea']);
-// nisor dewe
-Route::get('{url}', [BeritaController::class, 'isiberita']);
+// Jangan biarkan route catch-all menangkap file static seperti favicon, css atau js.
+Route::get('favicon.ico', function () {
+    $path = public_path('favicon.ico');
+    if (file_exists($path)) {
+        return response()->file($path);
+    }
+    abort(404);
+});
+
+// Batasi catch-all supaya tidak menangkap request yang mengandung titik (ekstensi file)
+// Letakkan catch-all di akhir file agar route spesifik seperti /formulir ditangani lebih dulu.
+Route::get('{url}', [BeritaController::class, 'isiberita'])->where('url', '^[^.]+$');
