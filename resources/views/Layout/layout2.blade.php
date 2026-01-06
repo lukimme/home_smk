@@ -33,6 +33,17 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+        <!-- ====== Tailwind CDN (tanpa preflight agar tidak mereset Bootstrap) ====== -->
+<script>
+  tailwind = window.tailwind || {};
+  tailwind.config = {
+    corePlugins: { preflight: false },
+    theme: {
+      extend: {}
+    }
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 
     <!-- owl -->
     <link rel="stylesheet" href="{{('carosel/owl.carousel.min.css')}}">
@@ -77,7 +88,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ Request::is('ppdb') ? 'active' : '' }}" aria-current="page"
-                                href="ppdb">PPDB</a>
+                                href="ppdb">SPMB</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#gel">Daftar Gelombang</a>

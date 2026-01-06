@@ -14,12 +14,12 @@ class SimpanController extends Controller
     public function simpan(Request $req ){
             
         // Set up the cURL request
-     
+        $base = config('api.base_url');
         $curl = curl_init();
         curl_setopt_array($curl, [
 
-        //sesuaikan alamat endpoint API
-        CURLOPT_URL => 'https://api.smkbudimuliapakisaji.sch.id/dataPPDB',
+        // sesuaikan alamat endpoint API
+        CURLOPT_URL => rtrim($base, '/') . '/dataPPDB',
         // CURLOPT_URL => 'http://localhost:1234/dataPPDB',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST => true,
