@@ -142,42 +142,6 @@
     <section id="why-us" class="sambutan">
         <div class="container my-5" data-aos="fade-up">
 
-            <!-- <div class="row justify-content-center">
-                <div
-                    class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
-
-                    <div class="content">
-                        <p class="fs-5 fw-bold text-muted">Sambutan Kepala SMK Budi Mulia Pakisaji</p>
-
-                        <p>
-
-                            Selamat datang di website resmi SMK Budi Mulia Pakisaji. Website ini kami hadirkan sebagai
-                            sarana informasi berbasis teknologi digital yang
-                            memudahkan masyarakat mengakses berbagai hal terkait SMK Budi Mulia Mulai dari program
-                            keahlian, kegiatan siswa, hingga layanan pendaftaran. Semoga kehadiran website ini dapat
-                            menjadi jembatan komunikasi yang bermanfaat bagi seluruh pihak.<br> Terima kasih atas
-                            kunjungannya.
-
-
-                        </p>
-                        <h5><strong>H. Imam Budiono, S.Pd</strong></h5>
-                        <h6>Kepala SMK Budi Mulia Pakisaji</h6>
-
-                    </div>
-
-                </div>
-                <!-- style='background-image: url("assets/aset/ks1.png");' -->
-            <!-- <div class="col-lg-6 col-12 align-items-stretch video-box order-1 order-lg-2" data-aos="zoom-in"
-                data-aos-delay="100" style="min-height:0;">
-                <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a> -->
-            <!-- <img src="assets/aset/ks.jpg" alt="" class="img-fluid d-block mx-auto w-100 w-md-50 rounded-3"> -->
-            <!-- <img src="assets/aset/ks.jpg" alt="" class="img-fluid d-block mx-auto rounded-3"
-                style="width: 100%; max-width: 50%;"> -->
-
-
-            <!-- </div> -->
-
-            <!-- </div> -->
 
             <div class="row justify-content-center">
                 <div
