@@ -312,7 +312,7 @@
                         </div>
                          <div class="col-md-6">
                             <div class="d-flex align-items-start p-3 bg-white rounded-xl shadow-soft">
-                                <div class="feature-icon fs-4 me-3">💄</div>
+                                <div class="feature-icon fs-4 me-3">📑</div>
                                 <div>
                                     <h6 class="fw-bold mb-1">Bahasa Jepang</h6>
                                     <p class="small text-muted mb-0">Siapkan karir dengan menguasi bahasa</p>
