@@ -11,7 +11,7 @@
         <div class="carousel-inner " role="listbox">
 
             <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url(assets/aset/baner/smkbm.png)">
+            <div class="carousel-item active" style="background-image: url(assets/aset/baner/smkbm.jpg)">
                 <div class="carousel-container ">
                     <div class="container">
                         <h2 class="animate__animated animate__fadeInDown ">
@@ -104,8 +104,8 @@
                         <div class="icon-box">
                             <!-- <div class="icon"><i class="bx bx-file"></i></div> -->
                             <div class="icon"><img src="assets/aset/ppdb.png" class="img-fluid" alt=""></div>
-                            <h4 class="title"><a href="/ppdb">PPDB</a></h4>
-                            <p class="description lh-base">Informasi pendaftaran peserta didik baru</p>
+                            <h4 class="title"><a href="/ppdb">SPMB</a></h4>
+                            <p class="description lh-base">Informasi Penerimaan Murid Baru</p>
                         </div>
                     </a>
                 </div>

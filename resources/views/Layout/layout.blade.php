@@ -105,6 +105,8 @@
 
     <!-- Template Main CSS File -->
     <link href="{{('/assets/css/style.css')}}" rel="stylesheet">
+    <!-- Tambahkan di layout.blade.php sebelum </body> -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 
 </head>
