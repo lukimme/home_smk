@@ -496,6 +496,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Panggil sekali saat halaman dimuat
     updateNamaOtomatis();
 
+    // Jika sebelumnya ada pendaftaran yang menunggu konfirmasi WA, tampilkan kembali modalnya
+    (function restorePendingWA() {
+        const pending = sessionStorage.getItem('waPending');
+        if (pending) {
+            try {
+                const data = JSON.parse(pending);
+                if (data && data.noPendaftaran) {
+                    showSuccessAlert(data.noPendaftaran);
+                } else {
+                    sessionStorage.removeItem('waPending');
+                }
+            } catch (e) {
+                sessionStorage.removeItem('waPending');
+            }
+        }
+    })();
+
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -641,6 +658,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSuccessAlert(noPendaftaran) {
         // Ambil nama siswa
         const namaSiswa = document.querySelector('input[name="nama_lengkap"]')?.value || '';
+
+        // Simpan status agar modal tetap muncul sampai WA dikirim
+        try { sessionStorage.setItem('waPending', JSON.stringify({ noPendaftaran, ts: Date.now() })); } catch (e) {}
         
         // NOMOR WHATSAPP SMK (GANTI INI DENGAN NOMOR SMK YANG BENAR)
         const nomorSMK = '6289513009008'; // Format: 62+kode negara+nomor
@@ -662,8 +682,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         color: white; padding: 15px; border-radius: 10px;
                         margin-bottom: 20px;
                     ">
-                        <div style="font-size: 50px; margin-bottom: 10px;">✅</div>
-                        <h2 style="margin: 0; font-size: 20px; font-weight: bold;">
+                        <div style="font-size: 20px; margin-bottom: 10px;">✅</div>
+                        <h2 style="margin: 0; font-size: 18px; font-weight: bold;">
                             PENDAFTARAN BERHASIL!
                         </h2>
                     </div>
@@ -689,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 ${noPendaftaran}
                             </div>
                             <p style="color: #ff9800; font-size: 12px; margin-top: 10px;">
-                                ⚠️ Simpan nomor ini!
+                                ⚠️ Simpan nomor pendaftaran anda!
                             </p>
                         </div>
                         
@@ -701,16 +721,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 font-weight: bold; width: 100%; margin-bottom: 10px;
                                 transition: all 0.3s;
                             ">
-                                📱 Konfirmasi ke WhatsApp SMK
+                                 Konfirmasi ke WhatsApp SMKBM
                             </button>
                             
                             <button id="closeModalBtn" style="
                                 background: #f5f5f5; color: #333; border: 1px solid #ddd;
                                 padding: 10px 20px; font-size: 14px; border-radius: 25px;
-                                cursor: pointer; font-weight: bold; width: 100%;
-                                transition: all 0.3s;
-                            ">
-                                ✏️ Isi Formulir Baru
+                                cursor: not-allowed; font-weight: bold; width: 100%;
+                                transition: all 0.3s; opacity: 0.6;
+                            " disabled>
+                                ⛔ Tidak dapat ditutup. Silakan kirim konfirmasi via WhatsApp.
                             </button>
                         </div>
                     </div>
@@ -759,29 +779,31 @@ Terima kasih.`;
             const whatsappURL = `https://wa.me/${nomorSMK}?text=${encodedMessage}`;
             window.open(whatsappURL, '_blank');
             
+            // Hapus status pending agar modal tidak muncul lagi setelah WA dikirim
+            try { sessionStorage.removeItem('waPending'); } catch (e) {}
+
             // Tutup modal
             document.getElementById('successModal').remove();
             
-            // Reset form setelah kirim WA
+            // Reset form setelah kirim WA lalu arahkan ke halaman depan
             setTimeout(() => {
                 document.getElementById('pendaftaranForm').reset();
                 updateNamaOtomatis();
+                // Arahkan ke halaman depan (root)
+                window.location.href = '/';
             }, 300);
         });
         
-        // Event listener untuk tombol Isi Baru
-        document.getElementById('closeModalBtn').addEventListener('click', function() {
-            document.getElementById('successModal').remove();
-            document.getElementById('pendaftaranForm').reset();
-            updateNamaOtomatis();
+        // Nonaktifkan tombol tutup sampai WA dikirim
+        document.getElementById('closeModalBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Harap kirim konfirmasi melalui WhatsApp terlebih dahulu.');
         });
         
-        // Tutup modal saat klik di luar
+        // Cegah modal ditutup dengan klik di luar
         document.getElementById('successModal').addEventListener('click', function(e) {
             if (e.target.id === 'successModal') {
-                this.remove();
-                document.getElementById('pendaftaranForm').reset();
-                updateNamaOtomatis();
+                e.stopPropagation();
             }
         });
     }
